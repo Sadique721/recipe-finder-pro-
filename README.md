@@ -15,7 +15,7 @@ A sleek, dark-themed recipe application with enhanced UI/UX features powered by 
 - 📱 **Fully responsive** design (mobile-first)
 
 ## 🛠️ Tech Stack
-```mermaid
+mermaid
 graph TD
     A[Frontend] --> B(HTML5 Semantic Tags)
     A --> C(CSS3 Grid/Flexbox)
