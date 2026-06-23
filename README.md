@@ -1,126 +1,62 @@
-# 🍳 Recipe Finder Pro
+# 🌌 OmniQuery Pro - Unified Discovery Engine & AI Agent Workspace
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![API](https://img.shields.io/badge/API-TheMealDB-4CAF50)
+![APIs Supported](https://img.shields.io/badge/APIs-16%20Channels-blueviolet)
 
-A sleek, dark-themed recipe application with enhanced UI/UX features powered by TheMealDB API.
-
-## ✨ Premium Features
-- 🎨 **Dark mode UI** with smooth animations
-- 🔍 **Instant search** with error handling
-- 🖼️ **Hover-to-zoom** recipe cards
-- 📜 **Scrollable modal** with full instructions
-- 📱 **Fully responsive** design (mobile-first)
-
-## 🛠️ Tech Stack
-mermaid
-graph TD
-    A[Frontend] --> B(HTML5 Semantic Tags)
-    A --> C(CSS3 Grid/Flexbox)
-    A --> D(ES6+ Async/Await)
-    A --> E[Font Awesome Icons]
-    F[Backend] --> G(TheMealDB API)
-
-### **Social Media Promotion**
-
-#### LinkedIn Post (Professional):
-**🍳 Just Launched Recipe Finder Pro - Now with Dark Mode!**  
-
-I've upgraded my recipe app with:  
-✅ Sleek dark UI with CSS animations  
-✅ Enhanced mobile responsiveness  
-✅ Interactive recipe cards with hover effects  
-✅ Scrollable modal windows  
-
-**Tech Stack:**  
-▫️ Pure JavaScript (ES6 Modules)  
-▫️ CSS Grid/Flexbox  
-▫️ TheMealDB API Integration  
-
-This project helped me master:  
-- Dynamic DOM manipulation  
-- API error handling  
-- Mobile-first design principles  
-
-Check out the code: [GitHub Link]  
-#JavaScript #FrontendDev #WebDesign #APIIntegration #CodingPortfolio #TechProjects #WebDevelopment #UXDesign #RecipeApp #OpenSource
+OmniQuery Pro is a premium, glassmorphic search dashboard that merges **16 distinct discovery channels** into a single frontend hub. It features live queries to public APIs (Recipes, Cocktails, Movies, Music, News, Sports, Anime, Books, Crypto, Dictionary, Universities, Jokes, Quotes, and Developers), a retro arcade mini-game sandbox, and an interactive AI Agent console with live terminal command streaming.
 
 ---
 
-#### Instagram Post (Visual Appeal):
-**✨ Swipe → See my DARK MODE Recipe Finder!**  
-[Carousel: 1.Search 2.Cards 3.Modal]  
+## ✨ Features
 
-🔥 New Features:  
-• Eye-friendly dark theme  
-• Buttery-smooth animations  
-• All device compatible  
-
-Built with:  
-💻 Vanilla JS (no frameworks!)  
-🌐 Free recipe API  
-🎨 Custom scrollable modals  
-
-**GitHub link in bio!** 👨‍💻  
-#JavaScript #WebDev #DarkMode #RecipeApp #Coding #Frontend #Developer #CSS #HTML #WebDesign #UIDesign #API #NoFrameworks #FoodTech #CodeLife #TechForGood #100DaysOfCode #BuildInPublic
+- 🎨 **Glassmorphism Design**: High-fidelity dark mode utilizing backdrop filters, glowing HSL colors, smooth transitions, and animated loaders.
+- 🔗 **API ID Badges**: Each search result displays its unique ID tag prominently, reflecting system record tracking.
+- 🎵 **Floating Audio Player**: Integrates iTunes track previews with real-time audio playback controls and a scrubbing progress bar.
+- 🎮 **Retro Arcade Sandbox**: Canvas-based Snake Game embedded directly within the Online Gaming channel.
+- 🤖 **AI Agent Workspace**: Interactive terminal shell where users can issue tasks to simulated AI Agents (Antigravity, AutoGPT, Claude Engineer, Devika) and view streaming execution logs.
+- 📱 **Fully Responsive Layout**: Intuitive sidebar navigation collapses to an horizontal scrollbar on tablet/mobile screens.
 
 ---
 
-#### Twitter Thread:
-1/4: 🚀 Just launched Recipe Finder Pro v2!  
+## 🛠️ Architecture
 
-A complete UI overhaul with:  
-• Dark theme  
-• Mobile optimizations  
-• Interactive elements  
-
-Live demo: [Link] #FrontendDev  
-
-2/4: Under the hood:  
-🔹 Pure JavaScript ES6+  
-🔹 CSS Grid/Flexbox  
-🔹 TheMealDB API  
-
-No frameworks = faster load times! #JavaScript  
-
-3/4: Key features I'm proud of:  
-✅ Dynamic content loading  
-✅ Error-boundary UI states  
-✅ Accessibility enhancements  
-
-GitHub: [Link] #WebDevelopment  
-
-4/4: Lessons learned:  
-📌 API rate limiting handling  
-📌 Mobile touch events  
-📌 Performance optimization  
-
-Would love your feedback! #CodeNewbie
+```
+                                  [ OmniQuery Pro Dashboard ]
+                                               │
+        ┌──────────────────────────────────────┼──────────────────────────────────────┐
+        ▼                                      ▼                                      ▼
+[ Public APIs Feed ]                 [ Retro Game Arcade ]                 [ AI Agent Workspace ]
+  ├── Recipes (MealDB)                 └── Snake Classic                     ├── Terminal Terminal Emulator
+  ├── Cocktails (CocktailDB)                                                 ├── Log Feed stream
+  ├── Movies & TV (TVMaze)                                                   └── Agent Profile cards
+  ├── Music (iTunes)
+  ├── News (Spaceflight)
+  ├── Sports (SportsDB)
+  ├── Anime (Jikan)
+  ├── Books (OpenLibrary)
+  ├── Crypto (CoinGecko)
+  ├── Dictionary (DictionaryAPI)
+  ├── Universities (HipoLabs)
+  ├── Jokes (Official Joke)
+  ├── Quotes (DummyJSON)
+  └── Developers (DummyJSON)
+```
 
 ---
 
-### Hashtag Strategy
-**Primary Tech Tags:**  
-`#JavaScript #WebDev #Frontend #APIIntegration #CSS`
+## 📂 Project Structure
 
-**UI/UX Focus:**  
-`#DarkMode #WebDesign #UIDesign #ResponsiveDesign`
-
-**Community Tags:**  
-`#BuildInPublic #CodeNewbie #100DaysOfCode`
-
-**Niche Tags:**  
-`#RecipeApp #FoodTech #CookingTech #NoFrameworks`
-
-**Bonus Trend Tags:**  
-`#Developer #Coding #Programming #Tech #OpenSource`
+- [index.htm](file:///d:/Githube/New%20folder/recipe-finder-pro-/index.htm): Modern structural markup for the sidebar layout, main search dashboard panels, custom audio players, game canvas, and terminal output screens.
+- [style.css](file:///d:/Githube/New%20folder/recipe-finder-pro-/style.css): Custom stylesheet implementing HSL variables, dark glassmorphic styling, neon glows, scrollbars, and keyframe animations.
+- [script.js](file:///d:/Githube/New%20folder/recipe-finder-pro-/script.js): Main core engine managing API routers, player controls, canvas game graphics, and AI agent terminal logging streams.
+- [note.txt](file:///d:/Githube/New%20folder/recipe-finder-pro-/note.txt): Fast reference file detailing developer notes, endpoints, and highlighted elements.
 
 ---
 
-### Key Differentiators to Highlight
-1. **Dark Theme Implementation**: Showcase your CSS variables and color scheme choices
-2. **Performance**: Note the lack of framework overhead
-3. **Mobile Optimization**: Demonstrate your media query skills
-4. **Interactive Elements**: Highlight the hover animations and modal transitions
+## 🚀 Getting Started
+
+1. Clone or download the repository files.
+2. Double-click [index.htm](file:///d:/Githube/New%20folder/recipe-finder-pro-/index.htm) to open the application directly in any web browser.
+3. Select any search channel from the sidebar, input queries, and explore live metadata records.

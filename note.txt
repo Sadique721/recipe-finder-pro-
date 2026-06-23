@@ -1,0 +1,48 @@
+========================================================================
+                      OMNIQUERY PRO - DEVELOPER NOTES
+========================================================================
+
+OmniQuery Pro is a premium, unified multi-channel search engine dashboard
+and AI agent workspace sandbox. It transitions the original single-purpose
+"Recipe App" into a comprehensive discovery center supporting 16 API
+channels with beautiful layouts, glassmorphic styling, and interactive features.
+
+------------------------------------------------------------------------
+1. INTEGRATED CHANNELS & ENDPOINTS:
+------------------------------------------------------------------------
+- Recipes: TheMealDB Search API (https://www.themealdb.com/api/json/v1/1/search.php?s=)
+- Cocktails: TheCocktailDB Search API (https://www.thecocktaildb.com/api/json/v1/1/search.php?s=)
+- Movies/Videos: TVMaze Search API (https://api.tvmaze.com/search/shows?q=)
+- Music & Tracks: iTunes Search API (https://itunes.apple.com/search?entity=song&term=)
+- Latest News: Spaceflight News API (https://api.spaceflightnewsapi.net/v4/articles/?search=)
+- Sports & Teams: TheSportsDB Team Search (https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=)
+- Online Gaming: High-fidelity game catalog search and retro Snake game simulation
+- Anime Hub: Jikan API v4 Search (https://api.jikan.moe/v4/anime?q=)
+- Books & Literature: Open Library Search (https://openlibrary.org/search.json?q=)
+- AI Agents Console: Mock database of premium agents with live console shell simulations
+- Crypto Coins: CoinGecko Token Search (https://api.coingecko.com/api/v3/search?query=)
+- Dictionary: Free Dictionary API Lookup (https://api.dictionaryapi.dev/api/v2/entries/en/)
+- Global Universities: HipoLabs Search (http://universities.hipolabs.com/search?name=)
+- Jokes Finder: Official Joke API (https://official-joke-api.appspot.com/jokes/search?term=)
+- Famous Quotes: DummyJSON Quotes Search (https://dummyjson.com/quotes/search?q=)
+- Dev Finder: DummyJSON Users Search (https://dummyjson.com/users/search?q=)
+
+------------------------------------------------------------------------
+2. HIGHLIGHTED PREMIUM FEATURES:
+------------------------------------------------------------------------
+- Neon-Glow Badges: All items display their unique system database ID clearly on each card.
+- Floating Media Player: Plays 30-second iTunes track audio previews with custom scrubbing bar.
+- Playable Mini-Game: Retro canvas Snake game directly inside the Gaming channel.
+- AI Workspace Simulation: Stream logs and trace outputs on terminal execution inputs.
+- Glassmorphic UI Backdrop: Beautiful blurred filters, modern Outfit typography, HSL layouts.
+
+------------------------------------------------------------------------
+3. PROJECT STATE & COMPLIANCE:
+------------------------------------------------------------------------
+- Zero External Framework Dependencies (pure HTML5, CSS3, ES6 Javascript).
+- 100% Responsive: Fits Desktop, iPad, and Mobile viewports with touch toggle layouts.
+- Highly optimized error-handling and skeleton-state loading indicators.
+
+Created Date: 2026-06-23
+Author: AI Coding Agent Collaboration
+========================================================================

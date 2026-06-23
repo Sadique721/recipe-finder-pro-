@@ -3,42 +3,251 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <title>OmniQuery Pro | Universal Search & AI Agent Hub</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <title>Recipe App</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <h1>Recipe App</h1>
-        <form>
-          <input
-            type="text"
-            placeholder="search for recipes..."
-            class="searchBox"
-          />
-          <button type="submit" class="searchBtn">Search</button>
-        </form>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <div>
-          <div class="recipe-container">
-            <h2>Search your favorite recipes...</h2>
+    <div class="app-container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-icon">
+            <i class="fas fa-search-plus text-gradient"></i>
           </div>
-          <div class="recipe-details">
-            <button type="button" class="recipe-close-btn">
-              <i class="fas fa-times"></i>
-            </button>
-            <div class="recipe-details-content"></div>
+          <div class="brand-text">
+            <h2>OmniQuery <span class="badge-pro">PRO</span></h2>
+            <p>Unified Discovery Engine</p>
           </div>
         </div>
-      </section>
-    </main>
+
+        <nav class="sidebar-nav">
+          <p class="nav-section-title">Core Search Channels</p>
+          <ul class="nav-list">
+            <li class="nav-item active" data-category="recipes">
+              <i class="fas fa-utensils"></i>
+              <span>Recipes (MealDB)</span>
+            </li>
+            <li class="nav-item" data-category="cocktails">
+              <i class="fas fa-glass-martini-alt"></i>
+              <span>Cocktails API</span>
+            </li>
+            <li class="nav-item" data-category="movies">
+              <i class="fas fa-film"></i>
+              <span>Hollywood / Bolly</span>
+            </li>
+            <li class="nav-item" data-category="music">
+              <i class="fas fa-music"></i>
+              <span>Music & Tracks</span>
+            </li>
+            <li class="nav-item" data-category="news">
+              <i class="fas fa-newspaper"></i>
+              <span>Latest News</span>
+            </li>
+            <li class="nav-item" data-category="sports">
+              <i class="fas fa-running"></i>
+              <span>Sports & Teams</span>
+            </li>
+            <li class="nav-item" data-category="games">
+              <i class="fas fa-gamepad"></i>
+              <span>Online Gaming</span>
+            </li>
+            <li class="nav-item" data-category="anime">
+              <i class="fas fa-tv"></i>
+              <span>Anime Hub</span>
+            </li>
+            <li class="nav-item" data-category="books">
+              <i class="fas fa-book"></i>
+              <span>Books & Literature</span>
+            </li>
+          </ul>
+
+          <p class="nav-section-title">Utilities & AI Sandbox</p>
+          <ul class="nav-list">
+            <li class="nav-item" data-category="ai-agents">
+              <i class="fas fa-robot text-neon-blue"></i>
+              <span class="text-neon-blue">AI Agents Console</span>
+              <span class="nav-badge hot">LIVE</span>
+            </li>
+            <li class="nav-item" data-category="crypto">
+              <i class="fas fa-coins"></i>
+              <span>Crypto Coins</span>
+            </li>
+            <li class="nav-item" data-category="dictionary">
+              <i class="fas fa-atlas"></i>
+              <span>Dictionary Lookup</span>
+            </li>
+            <li class="nav-item" data-category="universities">
+              <i class="fas fa-university"></i>
+              <span>Global Unis</span>
+            </li>
+            <li class="nav-item" data-category="jokes">
+              <i class="fas fa-laugh-squint"></i>
+              <span>Jokes Finder</span>
+            </li>
+            <li class="nav-item" data-category="quotes">
+              <i class="fas fa-quote-left"></i>
+              <span>Famous Quotes</span>
+            </li>
+            <li class="nav-item" data-category="developers">
+              <i class="fas fa-users"></i>
+              <span>Dev / User Finder</span>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="user-profile">
+            <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Antigravity" alt="User Avatar" class="avatar" />
+            <div class="user-info">
+              <p class="username">Developer Mode</p>
+              <p class="user-role">Agent Workspace</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Dashboard Panel -->
+      <main class="main-panel">
+        <header class="main-header">
+          <div class="header-left">
+            <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+            <h1 id="active-category-title">Recipes Finder</h1>
+            <p id="active-category-desc">Explore food recipes from across the globe using TheMealDB API</p>
+          </div>
+          <div class="header-right">
+            <div class="search-wrapper">
+              <form id="search-form">
+                <i class="fas fa-search search-icon"></i>
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search recipes..."
+                  autocomplete="off"
+                />
+                <button type="button" id="clear-search-btn" class="clear-btn">
+                  <i class="fas fa-times"></i>
+                </button>
+                <button type="submit" class="submit-btn">Search</button>
+              </form>
+            </div>
+          </div>
+        </header>
+
+        <!-- Stats & Meta Bar -->
+        <div class="meta-bar">
+          <div class="meta-item">
+            <span class="meta-label">Status:</span>
+            <span id="api-status-badge" class="status-badge connected">Connected</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Source URL:</span>
+            <span id="api-endpoint-url" class="endpoint-url">https://www.themealdb.com/api/json/v1/1/search.php?s=</span>
+          </div>
+          <div class="meta-item ml-auto">
+            <span class="meta-label">Records Found:</span>
+            <span id="records-count-badge" class="count-badge">0</span>
+          </div>
+        </div>
+
+        <!-- Dashboard Content Grid -->
+        <div class="content-container">
+          <!-- Main dynamic cards grid -->
+          <div id="results-grid" class="cards-grid">
+            <!-- Initial prompt state will be injected here -->
+          </div>
+
+          <!-- Gaming Sandbox Panel (Hidden initially) -->
+          <div id="gaming-sandbox" class="sandbox-panel hidden">
+            <div class="game-header">
+              <h3><i class="fas fa-gamepad text-neon-green"></i> Retro Arcade Sandbox</h3>
+              <p>Take a break and test your score in the browser Snake Game!</p>
+            </div>
+            <div class="game-area">
+              <div class="game-scores">
+                <div>Score: <span id="game-score">0</span></div>
+                <div>High Score: <span id="game-high-score">0</span></div>
+              </div>
+              <canvas id="game-canvas" width="400" height="400"></canvas>
+              <div class="game-controls">
+                <button id="start-game-btn" class="btn btn-primary"><i class="fas fa-play"></i> Start/Reset Game</button>
+                <p class="game-instructions">Use <b>Arrow Keys</b> or <b>W, A, S, D</b> to navigate the snake.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Agent Terminal Sandbox (Hidden initially) -->
+          <div id="ai-agent-sandbox" class="sandbox-panel hidden">
+            <div class="terminal-container">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="terminal-title">AI AGENT SIMULATOR - CONSOLE v3.8.5</div>
+                <div class="terminal-status"><span class="pulse-indicator"></span> ONLINE</div>
+              </div>
+              <div class="terminal-body" id="terminal-output">
+                <div class="term-line system">Initializing AI Agent workspace... Done.</div>
+                <div class="term-line system">Available agents loaded: Antigravity, AutoGPT, Claude Engineer, Devika.</div>
+                <div class="term-line prompt">Select an AI agent from the list above and input a prompt to begin simulation.</div>
+              </div>
+              <div class="terminal-input-bar">
+                <span class="prompt-symbol">&gt;&gt;</span>
+                <input type="text" id="terminal-input" placeholder="Type a prompt for the AI Agent..." />
+                <button id="send-terminal-btn"><i class="fas fa-paper-plane"></i> Run</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Backdrop Blur Detail Modal -->
+    <div class="modal-backdrop" id="detail-modal">
+      <div class="modal-content">
+        <button class="modal-close-btn" id="modal-close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-body-wrapper" id="modal-body-content">
+          <!-- Custom detail layout loaded dynamically in script.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom Floating Global Audio Player for Music API -->
+    <div class="global-audio-player hidden" id="global-player">
+      <div class="player-art-wrapper">
+        <img id="player-art" src="https://picsum.photos/50" alt="Album Cover" />
+      </div>
+      <div class="player-info">
+        <p id="player-title" class="player-title-text">No Song Loaded</p>
+        <p id="player-artist" class="player-artist-text">Select a song preview</p>
+      </div>
+      <div class="player-controls">
+        <button id="player-prev" class="player-btn"><i class="fas fa-step-backward"></i></button>
+        <button id="player-play" class="player-btn play-pause"><i class="fas fa-play"></i></button>
+        <button id="player-next" class="player-btn"><i class="fas fa-step-forward"></i></button>
+      </div>
+      <div class="player-progress-container">
+        <span id="player-time-current">0:00</span>
+        <div class="progress-bar-bg" id="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-bar-fill"></div>
+        </div>
+        <span id="player-time-total">0:30</span>
+      </div>
+      <audio id="global-audio-element" src=""></audio>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
